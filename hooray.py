@@ -24,9 +24,6 @@ if __name__ == "__main__":
         make.make(sys.argv[2])
     elif sys.argv[1] == "help": 
         help.help()
-    elif sys.argv[1] == "add_pkg":
-        from add_pkg import request_to_add
-        request_to_add()
     elif sys.argv[1] == "destroy":
         from destroy import destroy
         destroy(sys.argv[2])
