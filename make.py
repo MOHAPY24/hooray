@@ -21,13 +21,13 @@ def make(package_name):
             total_items = 2
             with alive_bar(total_items) as bar:
                 for i in range(1):
-                    subprocess.run(f'wget {packages[package_name]} -O /tmp/{package_name}.deb > /dev/null 2>&1')
+                    subprocess.run(f'wget {packages[package_name]} -O /tmp/{package_name}.deb > /dev/null 2>&1', shell=True)
                     bar()
-                    subprocess.run(f"sudo dpkg -i /tmp/{package_name}.deb > /dev/null 2>&1")
+                    subprocess.run(f"sudo dpkg -i /tmp/{package_name}.deb > /dev/null 2>&1", shell=True)
                     bar()
                     time.sleep(0.5)
             print(Fore.GREEN + f"[+] package: '{package_name}' installed.")
-            subprocess.run("sudo rm -rf /tmp/*")
+            subprocess.run("sudo rm -rf /tmp/*", shell=True)
             exit(0)
         else:
             exit(0)
