@@ -13,6 +13,6 @@ def destroy(package_name):
     if package_name not in data:
         print(Fore.RED + f"[x] package '{package_name}' is not a valid package.")
         exit(1)
-    os.system(f"sudo apt remove -y {package_name} > /dev/null 2>&1")
+    os.system(f"sudo dpkg -r {package_name} > /dev/null 2>&1")
     print(Fore.GREEN + f"[+] package: '{package_name}' removed.")
     quit(0)

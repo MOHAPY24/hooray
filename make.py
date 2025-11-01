@@ -2,7 +2,7 @@
 import os
 import json, time
 from colorama import init, Fore 
-from tqdm import tqdm
+from alive_progress import alive_bar
 init(True)
 
 
@@ -17,10 +17,14 @@ def make(package_name):
             cmd = "y"
         if cmd == "y":
             print(Fore.GREEN + f"[+] Installing '{package_name}'")
-            for i in tqdm(range(1)):
-                os.system(f'wget {data[package_name]} -O /tmp/{package_name}.deb > /dev/null 2>&1')
-                os.system(f"sudo apt install -y /tmp/{package_name}.deb > /dev/null 2>&1")
-                time.sleep(0.5)
+            total_items = 2
+            with alive_bar(total_items) as bar:
+                for i in range(1):
+                    os.system(f'wget {data[package_name]} -O /tmp/{package_name}.deb > /dev/null 2>&1')
+                    bar()
+                    os.system(f"sudo dpkg -i /tmp/{package_name}.deb > /dev/null 2>&1")
+                    bar()
+                    time.sleep(0.5)
             print(Fore.GREEN + f"[+] package: '{package_name}' installed.")
             os.system("sudo rm -rf /tmp/*")
             exit(0)

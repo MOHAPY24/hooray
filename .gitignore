@@ -42,6 +42,8 @@ htmlcov/
 .nox/
 .coverage
 .coverage.*
+*.pyc
+*.cpython-313.pyc
 .cache
 nosetests.xml
 coverage.xml
@@ -50,6 +52,8 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 cover/
+#venvs
+venv/
 
 # Translations
 *.mo
