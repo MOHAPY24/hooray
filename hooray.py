@@ -21,12 +21,18 @@ except:
 
 if __name__ == "__main__":
     if sys.argv[1] == "make":
-        make.make(sys.argv[2])
+        try:
+            make.make(sys.argv[2])
+        except IndexError:
+            print(Fore.RED + "[X] No package name given.")
     elif sys.argv[1] == "help": 
         help.help()
     elif sys.argv[1] == "destroy":
         from destroy import destroy
-        destroy(sys.argv[2])
+        try:
+            destroy(sys.argv[2])
+        except IndexError:
+            print(Fore.RED + "[X] No package name given.")
     else:
         print(Fore.RED + f"[X] Unknown command '{sys.argv[1]}'.")
         print(Fore.BLUE + "[+] use 'hooray help' for more information.")

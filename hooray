@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ "$1" != "" ]; then
+    if [ "$2" != "" ]; then
+        python3 hooray.py "$1" "$2"
+    else
+        python3 hooray.py "$1"
+    fi
+else
+    python3 hooray.py
+fi
