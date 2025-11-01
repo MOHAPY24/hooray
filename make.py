@@ -8,9 +8,10 @@ init(True)
 
 with open("validrepos.json", 'r') as f:
     data = json.loads(f.read())
+    packages = data["stable"]["packages"]
 
 def make(package_name):
-    if package_name in data:
+    if package_name in packages:
         print(Fore.GREEN + f"[+] package: '{package_name}' found in DPUR")
         cmd = input("[/] install? [Y/n]: ").lower()
         if cmd == "" or cmd == " ":
@@ -20,7 +21,7 @@ def make(package_name):
             total_items = 2
             with alive_bar(total_items) as bar:
                 for i in range(1):
-                    os.system(f'wget {data[package_name]} -O /tmp/{package_name}.deb > /dev/null 2>&1')
+                    os.system(f'wget {packages[package_name]} -O /tmp/{package_name}.deb > /dev/null 2>&1')
                     bar()
                     os.system(f"sudo dpkg -i /tmp/{package_name}.deb > /dev/null 2>&1")
                     bar()

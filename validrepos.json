@@ -1,9 +1,21 @@
 {
-    "vscode" : "https://github.com/MOHAPY24/EDPR/releases/download/package/code_1.104.2-1758714318_amd64.deb",
-    "discord" : "https://github.com/MOHAPY24/EDPR/releases/download/package/discord-0.0.111.deb",
-    "spotify" : "https://github.com/MOHAPY24/EDPR/releases/download/package/spotify-client_1.2.63.394.g126b0d89_amd64.deb",
-    "tlauncher" : "https://github.com/MOHAPY24/EDPR/releases/download/package/tlauncher-linux-installer.deb",
-    "steam" : "https://github.com/MOHAPY24/EDPR/releases/download/package/steam_latest.deb",
-    "vivaldi" : "https://github.com/MOHAPY24/EDPR/releases/download/package/vivaldi-stable_7.6.3797.56-1_amd64.deb",
-    "zoom" : "https://github.com/MOHAPY24/EDPR/releases/download/package/zoom_amd64.deb"
+    "stable": {
+        "packages":{
+            "vscode" : "https://github.com/MOHAPY24/EDPR/releases/download/package/code_1.104.2-1758714318_amd64.deb",
+            "discord" : "https://github.com/MOHAPY24/EDPR/releases/download/package/discord-0.0.111.deb",
+            "spotify" : "https://github.com/MOHAPY24/EDPR/releases/download/package/spotify-client_1.2.63.394.g126b0d89_amd64.deb",
+            "tlauncher" : "https://github.com/MOHAPY24/EDPR/releases/download/package/tlauncher-linux-installer.deb",
+            "steam" : "https://github.com/MOHAPY24/EDPR/releases/download/package/steam_latest.deb",
+            "vivaldi" : "https://github.com/MOHAPY24/EDPR/releases/download/package/vivaldi-stable_7.6.3797.56-1_amd64.deb",
+            "zoom" : "https://github.com/MOHAPY24/EDPR/releases/download/package/zoom_amd64.deb"
+        },
+
+        "metadata":{
+            "name": "stable-branch",
+            "version" : "1.0.0",
+            "package_count": 8
+        }
+
+        
+    }
 }
