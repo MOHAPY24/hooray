@@ -10,5 +10,4 @@ def help():
     print("\t\tmake <package_name> \t- installs a package from the DPUR (Debian Public User Repository).")
     print("\t\thelp \t\t\t- shows this help message.")
     print("\tdestroy <package_name> \t- uninstalls a package from your system.")
-    print("\n\tValid package names can be found in the validrepos.json file, or on the GitHub page:")
-    print("\thttps://github.com/MOHAPY24/EDPR")
+    print("\n\tValid package names can be found in the validrepos.json file.")

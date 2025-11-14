@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import subprocess
 import json, time
-from colorama import init, Fore 
+from colorama import init, Fore
 from alive_progress import alive_bar
 init(True)
 
